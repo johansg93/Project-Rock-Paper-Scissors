@@ -18,11 +18,11 @@ function getComputerChoice() {
 
     switch (nummer) {
         case 1:
-            return "Rock";
+            return "rock";
         case 2:
-            return "Scissors";
+            return "scissors";
         case 3:
-            return "Paper";
+            return "paper";
     }
 }
 
