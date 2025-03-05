@@ -31,6 +31,27 @@ function getHumanChoice() {
 
     return humanChoice;
 }
+
+function playRound(human, computer){
+    if (human === computer) {
+        return "Draw!";
+    }
+
+    if (
+        (human === "rock" && computer === "Scissors") ||
+        (human === "scissors" && computer === "Paper") ||
+        (human === "paper" && computer === "Rock")
+        ){
+            return "You won!" + human + "beats " + computer + "!"; 
+
+    } else {
+        return "You lost..." + computer + "beats " + human + "...";
+    }
+
+
+
+}
+
 let humanScore = 0;
 let computerScore = 0;
 
