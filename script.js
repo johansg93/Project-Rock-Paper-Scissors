@@ -42,18 +42,40 @@ function playRound(human, computer){
         (human === "scissors" && computer === "Paper") ||
         (human === "paper" && computer === "Rock")
         ){
-            return "You won!" + human + "beats " + computer + "!"; 
+            console.log("You won!" + human + "beats " + computer + "!");
+            return "human"; 
 
     } else {
-        return "You lost..." + computer + "beats " + human + "...";
+        "You lost..." + computer + "beats " + human + "...";
+        return "computer";
     }
 
 
 
 }
 
-let humanScore = 0;
-let computerScore = 0;
+function playGame (rounds){
+    let humanScore = 0;
+    let computerScore = 0;
+    let draws = 0; 
+
+    for (let i = 0; i<=rounds;i++){
+        alert('Round ${i} of ${rounds}');
+        
+        let userChoice = getHumanChoice();
+        let computerChoice = getComputerChoice();
+
+        alert ('You chose: ${userChoice.charAt(0).toUpperCase() + userChoice.slice(1)} computer chose: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}');
+
+        let result = playRound(userChoice, computerChoice);
+
+        if (result === )
+
+
+    }
+}
+
+
 
 console.log(getComputerChoice());
 console.log(getHumanChoice());
