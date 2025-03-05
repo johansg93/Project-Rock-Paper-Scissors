@@ -59,23 +59,34 @@ function playGame (rounds){
     let computerScore = 0;
     let draws = 0; 
 
-    for (let i = 0; i<=rounds;i++){
-        alert('Round ${i} of ${rounds}');
+    for (let i = 1; i<=rounds;i++){
+        alert(`Round ${i} of ${rounds}.`);
         
         let userChoice = getHumanChoice();
         let computerChoice = getComputerChoice();
 
-        alert ('You chose: ${userChoice.charAt(0).toUpperCase() + userChoice.slice(1)} computer chose: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}');
+        alert (`You chose: ${userChoice.charAt(0).toUpperCase() + userChoice.slice(1)} computer chose: ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`);
 
         let result = playRound(userChoice, computerChoice);
 
-        if (result === )
+        if (result === "human"){
+            humanScore++;
+            alert("You won the round!");
+        } else if (result === "computer"){
+            computerScore++;
+            alert("The Computer won the round...");
+        } else {
+            draws++;
+            alert("It's a draw.");
+        }
 
 
     }
+    alert(`The results after ${rounds} rounds: \nPlayer: ${humanScore} wins. \n Computer: ${computerScore} wins. \n Draws: ${draws}.`);
 }
+playGame(5);
 
-
-
+/*
 console.log(getComputerChoice());
 console.log(getHumanChoice());
+*/
